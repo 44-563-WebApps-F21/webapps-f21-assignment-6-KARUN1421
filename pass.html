@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-
-
 <head>
     <title>Java Script and DOM</title>
     <script>
         var correct = 0, wrong = 0;
         function processPhrase() {
-
-
 
             secretphrase = document.getElementById("secretphrase").value
             checkphrase = document.getElementById("checkphrase").value
@@ -19,8 +15,6 @@
                 alert("access allowed");
             } else {
 
-
-
                 wrong = wrong + 1;
                 document.getElementById("result").innerHTML = "Wrong count " + wrong;
                 alert("access denied");
@@ -28,44 +22,25 @@
         }
 
         let usingImage = 1
-
         function newImage(img) {
-
             debugger;
-
             switch (usingImage) {
-
                 case 1:
-
                     document.getElementById("animals").src = "Albatross.jpg"
-
                     usingImage++;
-
                     break;
-
                 case 2:
-
                     document.getElementById("animals").src = "antelope.jpg"
-
                     usingImage++;
-
                     break;
-
                 default:
-
                     usingImage = 1;
-
                     document.getElementById("animals").src = "koala.jpg"
-
                     break;
-
             }
-
         }
     </script>
 </head>
-
-
 
 <body>
     <h1>Pass phrase by KARUN KUMAR AKKALA</h1>
@@ -78,20 +53,11 @@
         <input type="button" onclick="processPhrase()" value="Check the phrase">
     </form>
 
-
-
     <p id="result">Attempts display here </p>
-
     <div class="container">
-
         <img src="koala.jpg" id="animals" alt="koala" style="height: 200px;" width="200px;" onclick="newImage(this)" />
-
     </div>
 
-
-
 </body>
-
-
 
 </html>
