@@ -3,6 +3,16 @@
 
 <head>
     <title>Java Script and DOM</title>
+    <style>
+        form{
+            background-color: chocolate;
+            border: solid blueviolet;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
     <script>
         var correct = 0, wrong = 0;
         function processPhrase() {
@@ -18,6 +28,10 @@
                 wrong = wrong + 1;
                 document.getElementById("result").innerHTML = "Wrong count " + wrong;
                 alert("access denied");
+
+                if (wrong>3){
+                    alert("account locked");
+                }
             }
         }
 
